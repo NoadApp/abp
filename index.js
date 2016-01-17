@@ -2,6 +2,7 @@ var readline = require("line-reader");
 var punycode = require("punycode");
 var tldjs = require("tldjs");
 var filterClasses = require("./adblockplus.js");
+var thenify = require('thenify').withCallback;
 
 var typeMap = filterClasses.RegExpFilter.typeMap;
 
@@ -269,11 +270,13 @@ function logRules() {
 	return JSON.stringify(rules, null, "\t");
 }
 
-module.exports = function(file, callback){
+var abp = function(file, callback){
 	readline.eachLine(file, function(line, last) {
 			parseFilter(line);
 			if(last){
-				callback(logRules());
+				callback(null, logRules());
 			}
 	})
 }
+
+module.exports = thenify(abp);
