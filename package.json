@@ -1,0 +1,27 @@
+{
+  "name": "abp",
+  "version": "0.1.0",
+  "description": "abp parser",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoadApp/abp.git"
+  },
+  "keywords": [
+    "abp",
+    "easylist"
+  ],
+  "author": "mdemo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NoadApp/abp/issues"
+  },
+  "homepage": "https://github.com/NoadApp/abp#readme",
+  "dependencies": {
+    "line-reader": "^0.3.0",
+    "tldjs": "^1.6.2"
+  }
+}
