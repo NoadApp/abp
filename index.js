@@ -267,7 +267,7 @@ function logRules() {
 	for (i = 0; i < requestExceptions.length; i++)
 		addRule(convertFilter(requestExceptions[i], "ignore-previous-rules", true));
 
-	return JSON.stringify(rules, null, "\t");
+	return JSON.stringify(rules);
 }
 
 var abp = function(file, callback){

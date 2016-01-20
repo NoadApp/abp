@@ -1,6 +1,6 @@
 {
   "name": "abp",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "abp parser",
   "main": "index.js",
   "scripts": {
